@@ -1,0 +1,194 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Buy.gd" type="Script" id=2]
+[ext_resource path="res://font/PixelOperator.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://font/Poppins-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/Buy.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 4 )
+
+[node name="Buy" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+mode = 1
+script = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 7 )
+
+[node name="CenterTop" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CenterTop"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -42.0
+margin_right = 42.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "Buy"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="CenterTop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = 130.0
+margin_right = 87.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 2 )
+text = "Indonesia"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterBottom" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -40.0
+margin_right = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton" type="Button" parent="CenterBottom"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -230.0
+margin_right = 111.0
+margin_bottom = -175.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterBottom/BuyButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -76.5
+margin_top = -17.5
+margin_right = 76.5
+margin_bottom = 17.5
+custom_fonts/font = SubResource( 6 )
+text = "Selected"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterBottom"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -54.5
+margin_top = -140.0
+margin_right = 54.5
+margin_bottom = -112.0
+custom_fonts/font = SubResource( 3 )
+text = "Swipe left >"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopLeft" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TopLeft"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 80.0
+margin_bottom = 50.0
+
+[node name="Label" type="Label" parent="TopLeft/Button"]
+pause_mode = 2
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "< Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_right = -10.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Coin"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -125.0
+margin_top = 10.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 5 )
+text = "Cube: 324242"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="CenterBottom/BuyButton" to="." method="_on_BuyButton_button_down"]
+[connection signal="button_down" from="TopLeft/Button" to="." method="_on_Button_button_down"]
