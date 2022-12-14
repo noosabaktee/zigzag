@@ -1,20 +1,22 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://skin/0.jpg" type="Texture" id=2]
-[ext_resource path="res://skin/1.jpg" type="Texture" id=3]
-[ext_resource path="res://skin/2.jpg" type="Texture" id=4]
+[ext_resource path="res://skin/Hahahha.jpg" type="Texture" id=2]
+[ext_resource path="res://skin/watermelon.jpg" type="Texture" id=3]
+[ext_resource path="res://skin/wood.jpg" type="Texture" id=4]
 [ext_resource path="res://skin/BasketballColor.jpg" type="Texture" id=5]
 [ext_resource path="res://skin/SoftballColor.jpg" type="Texture" id=6]
 [ext_resource path="res://skin/NewTennisBallColor.jpg" type="Texture" id=7]
 [ext_resource path="res://skin/BeachBallColor.jpg" type="Texture" id=8]
-[ext_resource path="res://skin/Ball8.jpg" type="Texture" id=9]
+[ext_resource path="res://skin/footall.jpg" type="Texture" id=9]
+[ext_resource path="res://skin/Ball10.jpg" type="Texture" id=10]
+[ext_resource path="res://skin/Earth.jpg" type="Texture" id=11]
 
 [sub_resource type="SphereMesh" id=3]
 
 [sub_resource type="SpatialMaterial" id=6]
 flags_unshaded = true
-albedo_texture = ExtResource( 2 )
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="SpatialMaterial" id=7]
 flags_unshaded = true
@@ -22,7 +24,7 @@ albedo_texture = ExtResource( 3 )
 
 [sub_resource type="SpatialMaterial" id=8]
 flags_unshaded = true
-albedo_texture = ExtResource( 4 )
+albedo_texture = ExtResource( 2 )
 
 [sub_resource type="SpatialMaterial" id=9]
 flags_unshaded = true
@@ -42,10 +44,15 @@ albedo_texture = ExtResource( 8 )
 
 [sub_resource type="SpatialMaterial" id=13]
 flags_unshaded = true
-albedo_texture = ExtResource( 9 )
+albedo_texture = ExtResource( 10 )
 
 [sub_resource type="SpatialMaterial" id=14]
 flags_unshaded = true
+albedo_texture = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=15]
+flags_unshaded = true
+albedo_texture = ExtResource( 11 )
 
 [sub_resource type="SphereShape" id=4]
 
@@ -111,6 +118,12 @@ visible = false
 mesh = SubResource( 3 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 14 )
+
+[node name="9" type="MeshInstance" parent="MeshInstance"]
+visible = false
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 15 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 4 )

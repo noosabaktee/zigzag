@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.s3tc.stex"
-path.etc="res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.etc.stex"
+path.s3tc="res://.import/footall.jpg-33935df1285a187ed31612376b7aa3f8.s3tc.stex"
+path.etc="res://.import/footall.jpg-33935df1285a187ed31612376b7aa3f8.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://background/eXpresso.png"
-dest_files=[ "res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.s3tc.stex", "res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.etc.stex" ]
+source_file="res://skin/footall.jpg"
+dest_files=[ "res://.import/footall.jpg-33935df1285a187ed31612376b7aa3f8.s3tc.stex", "res://.import/footall.jpg-33935df1285a187ed31612376b7aa3f8.etc.stex" ]
 
 [params]
 

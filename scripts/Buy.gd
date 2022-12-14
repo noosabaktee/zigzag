@@ -12,9 +12,9 @@ onready var mesh = $Player.get_child(0)
 var price_list = []
 var name_list = []
 export var player_list = {
-						"Garuda":0, "Kayu":5, "Wooden":10, 
-						"Indonesia":0, "England":0, "Itali":0, 
-						"America":0, "India":0, "Singapore":0, "Island":0
+						"Wood":0, "Watermelon":50, "Haha":150, 
+						"Basketball":300, "Softball":500, "Tennis Ball":800, 
+						"Beach Ball":1200, "Pool Ball":1700, "Football":2500, "Earth":3000
 }
 var swipe_selected = selected
 

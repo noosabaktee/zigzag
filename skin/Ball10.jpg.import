@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.s3tc.stex"
-path.etc="res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.etc.stex"
+path.s3tc="res://.import/Ball10.jpg-ece72dced7dc316173fd6dda280859dc.s3tc.stex"
+path.etc="res://.import/Ball10.jpg-ece72dced7dc316173fd6dda280859dc.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://background/eXpresso.png"
-dest_files=[ "res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.s3tc.stex", "res://.import/eXpresso.png-90d52a475c68557c1e71be07ceb17df9.etc.stex" ]
+source_file="res://skin/Ball10.jpg"
+dest_files=[ "res://.import/Ball10.jpg-ece72dced7dc316173fd6dda280859dc.s3tc.stex", "res://.import/Ball10.jpg-ece72dced7dc316173fd6dda280859dc.etc.stex" ]
 
 [params]
 
