@@ -20,6 +20,7 @@ func _ready():
 	var selectedNumber = get_parent().loadData("selected")
 	selected = get_child(0).get_child(selectedNumber)
 	selected.show()
+	print(selectedNumber)
 
 func _unhandled_input(event):
 	if event is InputEventScreenTouch:
@@ -40,17 +41,13 @@ func _calculate_swipe(swipe_end):
 		else:
 			get_parent().add_score()
 			move = "left"
-		lastRotateX = selected.rotation.x
-		lastRotateZ = selected.rotation.z
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		move = "right"
 	elif Input.is_action_pressed("ui_left"):
 		move = "left"
-	else:
-		lastRotateX = selected.rotation.x
-		lastRotateZ = selected.rotation.z
+	
 
 		
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):

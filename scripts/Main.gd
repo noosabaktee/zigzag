@@ -1,7 +1,7 @@
 extends Spatial
 var score = 0
 var cube = 0
-var fileName = "user://save_game.save"
+var fileName = "user://save_game"
 var coin
 var bestScore 
 var theme

@@ -2,7 +2,7 @@ extends Spatial
 var swipe_start = null
 var swipe_end = null
 var minimum_drag = 100
-var fileName = "user://save_game.save"
+var fileName = "user://save_game"
 var selected = loadData("selected")
 var bought = loadData("bought")
 var coin = loadData("coin")
@@ -24,8 +24,6 @@ func _ready():
 		price_list.append(value)
 	for key in player_list:
 		name_list.append(key)
-	print(price_list)
-	print(name_list)
 	$Camera.environment = $"/root/Vars".bgArray[theme]
 	$CenterTop/Name.text = str(name_list[swipe_selected])
 	$Coin/Label.text = "Cube: " + str(coin)
